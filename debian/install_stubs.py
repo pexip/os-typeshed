@@ -17,7 +17,11 @@ debian = Path(".") / "debian"
 install_root = debian / "python3-typeshed"
 
 def run(cmd):
-    print(shlex.join(cmd))
+    if sys.version_info >= (3, 8):
+        cmd_str = shlex.join(cmd)
+    else:
+        cmd_str = " ".join(shlex.quote(arg) for arg in cmd)
+    print(cmd_str)
     subprocess.check_call(cmd)
 
 
