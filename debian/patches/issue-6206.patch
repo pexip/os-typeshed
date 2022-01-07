@@ -1,0 +1,36 @@
+From ce7484f70b829e42e4847dd2b6c4ede449cef40c Mon Sep 17 00:00:00 2001
+From: Huw Jones <huw@huwcbjones.co.uk>
+Date: Thu, 28 Oct 2021 11:57:40 +0100
+Subject: [PATCH] Add defaults to GCM.__init__ arguments (#6207)
+
+---
+ stubs/cryptography/@tests/stubtest_allowlist.txt                | 1 -
+ .../cryptography/hazmat/primitives/ciphers/modes.pyi            | 2 +-
+ 2 files changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/stubs/cryptography/@tests/stubtest_allowlist.txt b/stubs/cryptography/@tests/stubtest_allowlist.txt
+index 9eb68be6c6d..8e33e2d1f6c 100644
+--- a/stubs/cryptography/@tests/stubtest_allowlist.txt
++++ b/stubs/cryptography/@tests/stubtest_allowlist.txt
+@@ -12,7 +12,6 @@ cryptography.hazmat.primitives.asymmetric.dsa.AsymmetricVerificationContext
+ cryptography.hazmat.primitives.asymmetric.ec.AsymmetricVerificationContext
+ cryptography.hazmat.primitives.asymmetric.rsa.AsymmetricVerificationContext
+ cryptography.hazmat.primitives.ciphers.aead.AESCCM.__init__
+-cryptography.hazmat.primitives.ciphers.modes.GCM.__init__
+ cryptography.hazmat.primitives.cmac.CMAC.__init__
+ cryptography.hazmat.primitives.hashes.BLAKE2b.__init__
+ cryptography.hazmat.primitives.hashes.BLAKE2s.__init__
+diff --git a/stubs/cryptography/cryptography/hazmat/primitives/ciphers/modes.pyi b/stubs/cryptography/cryptography/hazmat/primitives/ciphers/modes.pyi
+index e01d2009438..b99d7a89fc9 100644
+--- a/stubs/cryptography/cryptography/hazmat/primitives/ciphers/modes.pyi
++++ b/stubs/cryptography/cryptography/hazmat/primitives/ciphers/modes.pyi
+@@ -67,7 +67,7 @@ class ECB(Mode):
+     def validate_for_algorithm(self, algorithm: CipherAlgorithm) -> None: ...
+ 
+ class GCM(Mode, ModeWithInitializationVector, ModeWithAuthenticationTag):
+-    def __init__(self, initialization_vector: bytes, tag: bytes | None, min_tag_length: int | None) -> None: ...
++    def __init__(self, initialization_vector: bytes, tag: bytes | None = ..., min_tag_length: int | None = ...) -> None: ...
+     @property
+     def initialization_vector(self) -> bytes: ...
+     @property
+
