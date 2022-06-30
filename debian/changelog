@@ -1,3 +1,9 @@
+typeshed (0.0~git20211009.0142ea8-3pexip4) pexip-bullseye; urgency=medium
+
+  * Rebuild for bullseye.
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Thu, 30 Jun 2022 13:32:28 +0100
+
 typeshed (0.0~git20211009.0142ea8-3pexip3) pexip; urgency=medium
 
   * Add patch to fix https://github.com/python/typeshed/issues/6206
