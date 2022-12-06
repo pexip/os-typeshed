@@ -11,8 +11,10 @@ Build-Depends: debhelper-compat (= 12),
                python3-wheel,
                python3-pip,
                python3-requests,
-               python3-toml
-Standards-Version: 4.6.0.1
+               python3-toml,
+               python3-tomli,
+               python3-packaging
+Standards-Version: 4.6.1
 Vcs-Git: https://salsa.debian.org/python-team/packages/typeshed.git
 Vcs-Browser: https://salsa.debian.org/python-team/packages/typeshed
 Homepage: https://github.com/python/typeshed
@@ -21,7 +23,7 @@ XS-Pexip-Upstream: http://ftp.debian.org/debian/ bookworm
 
 Package: python3-typeshed
 Architecture: all
-Depends: ${misc:Depends}, ${python3:Depends}
+Depends: ${misc:Depends}, python3:any
 Provides: ${typeshed:Provides}
 Breaks: python3-types-cryptography,
         python3-types-enum34,
@@ -37,6 +39,7 @@ Replaces: python3-types-cryptography,
           python3-types-six,
           python3-types-typed-ast,
           python3-types-toml
+Multi-Arch: foreign
 Description: collection of library stubs for Python, with static types
  Typeshed contains external type annotations for the Python standard library
  and Python builtins, as well as third party packages as contributed by people
