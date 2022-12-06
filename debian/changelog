@@ -1,3 +1,10 @@
+typeshed (0.0~git20221107.4f381af-1pexip1) pexip; urgency=medium
+
+  * New upstream release
+  * Ignore google-cloud-ndb
+
+ -- Huw Jones <huw@pexip.com>  Tue, 06 Dec 2022 11:54:57 +0000
+
 typeshed (0.0~git20221107.4f381af-1) unstable; urgency=medium
 
   * Team upload.
