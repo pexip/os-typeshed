@@ -1,3 +1,9 @@
+typeshed (0.0~git20221107.4f381af-1pexip3) pexip; urgency=medium
+
+  * Ignore SQLAlchemy
+
+ -- Huw Jones <huw@pexip.com>  Fri, 12 May 2023 12:23:44 +0100
+
 typeshed (0.0~git20221107.4f381af-1pexip2) pexip; urgency=medium
 
   * Ignore cryptography

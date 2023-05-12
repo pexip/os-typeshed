@@ -3,7 +3,7 @@
 %:
 	dh $@
 
-stubs ?= $(shell find stubs -mindepth 1 -maxdepth 1 -type d ! -name 'google-cloud-ndb' ! -name 'cryptography' -printf "%f\n")
+stubs ?= $(shell find stubs -mindepth 1 -maxdepth 1 -type d ! -name 'google-cloud-ndb' ! -name 'cryptography' ! -name 'SQLAlchemy' -printf "%f\n")
 
 override_dh_auto_install:
 	dh_auto_install
