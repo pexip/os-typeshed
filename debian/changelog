@@ -1,3 +1,9 @@
+typeshed (0.0~git20221107.4f381af-1pexip4) pexip-bookworm; urgency=medium
+
+  * Initial bookworm build
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Thu, 16 Nov 2023 10:34:46 +0000
+
 typeshed (0.0~git20221107.4f381af-1pexip3) pexip; urgency=medium
 
   * Ignore SQLAlchemy
